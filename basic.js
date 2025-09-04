@@ -85,3 +85,27 @@
 //  fs.readFile("a.txt","utf-8",print)
 //  fs.readFile("b.txt","utf-8",print)
 //  console.log("done");
+
+
+//class
+class Rectangle{
+            constructor(width,height,color){
+                this.width=width;
+                this.height=height;
+                this.color=color;
+            }
+
+area(){
+    const area=this.width*this.height;
+    return area;
+}
+
+print(){
+    console.log(`Painting with color ${this.color}`)
+    }
+}
+const rect= new Rectangle(10,10,"red")    
+const area =rect.area();
+const print= rect.print();
+
+console.log(area);

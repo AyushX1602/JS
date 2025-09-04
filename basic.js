@@ -88,24 +88,31 @@
 
 
 //class
-class Rectangle{
-            constructor(width,height,color){
-                this.width=width;
-                this.height=height;
-                this.color=color;
-            }
+// class Rectangle{
+//             constructor(width,height,color){
+//                 this.width=width;
+//                 this.height=height;
+//                 this.color=color;
+//             }
 
-area(){
-    const area=this.width*this.height;
-    return area;
-}
+// area(){
+//     const area=this.width*this.height;
+//     return area;
+// }
 
-print(){
-    console.log(`Painting with color ${this.color}`)
-    }
-}
-const rect= new Rectangle(10,10,"red")    
-const area =rect.area();
-const print= rect.print();
+// print(){
+//     console.log(`Painting with color ${this.color}`)
+//     }
+// }
+// const rect= new Rectangle(10,10,"red")    
+// const area =rect.area();
+// const print= rect.print();
 
-console.log(area);
+// console.log(area);
+
+
+const map =new Map();
+map.set('name','abc');
+map.set('age',10);
+
+console.log(map.get('name'));

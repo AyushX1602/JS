@@ -8,6 +8,7 @@
 // }
 // greet(user)
 
+
 // if (user.age > 18) {
 //     console.log("You can vote");
 // }
@@ -111,8 +112,71 @@
 // console.log(area);
 
 
-const map =new Map();
-map.set('name','abc');
-map.set('age',10);
+// const map =new Map();
+// map.set('name','abc');
+// map.set('age',10);
 
-console.log(map.get('name'));
+// console.log(map.get('name'));
+
+// function callback(){
+//     console.log("some time has passed!");
+// }
+// setTimeout(callback,3000);
+
+
+//Promises
+
+// function waitfor3s(callback){
+//     setTimeout(callback,3000)
+//     console.log("main is called");
+// }
+// function main(){
+//     console.log("main is called");
+// }
+// function calling(main){
+//     console.log("main is called");
+// }
+// waitfor3s(main);
+// calling(waitfor3s);
+// waitfor3s(calling);
+
+
+// function setTimeoutPromosified (ms) {
+//     return new Promise(resolve=>setTimeout(resolve,ms));
+// }
+// function callback(){
+//     console.log("3 secounds have passed ");
+//     }
+     
+// setTimeoutPromosified(3000).then(callback);
+
+
+// function random (resolve){
+//     setTimeout(resolve,3000);
+// }
+// let p=new Promise(random);
+// console.log(p);
+
+// function callback(){
+//     console.log("promise succeded!");   
+// }
+// p.then(callback);
+
+
+
+const fs=require('fs');
+function readtheFile(SendTheFinalValueHere){
+
+const data= fs.readFile('a.txt','utf-8',function(err,data){
+    SendTheFinalValueHere(data);
+    })
+}
+function readFile(fileName){
+    return new Promise (readtheFile);
+}
+const p= readFile();
+
+function callback(contents){
+    console.log(contents);
+}
+p.then(callback);

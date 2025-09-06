@@ -181,4 +181,54 @@
 // }
 // p.then(callback);
 
+////callback hell
+// function callback(){
+//     console.log("Hi");
+// }
 
+// setTimeout(function(){
+//         console.log("Hello");
+//     setTimeout(function(){
+//             console.log("Hi");
+//         },3000);
+// },1000);
+
+
+
+// function setTimeoutPromisified(ms){
+//     return new Promise(resolve => setTimeout(resolve,ms));
+// }
+
+// setTimeoutPromisified(3000)
+// .then(function(){
+//     console.log("Hello");
+//     return setTimeoutPromisified(1000);
+// })
+// .then(function(){
+//     console.log("Hi");
+//     return setTimeoutPromisified(2000);
+// })
+// .then(function(){
+//     console.log("Hello again");
+// })
+
+
+
+// async await
+
+function setTimeoutPromisified(duration){
+    return new Promise(function(resolve ){
+        setTimeout(resolve,duration);
+    });
+}
+
+async function solve(){
+    await setTimeoutPromisified(1000);
+    console.log("Hi");
+    await setTimeoutPromisified(2000);
+    console.log("Hello");
+    await setTimeoutPromisified(3000)
+    console.log("hello again");
+}
+solve();
+ console.log("yo")

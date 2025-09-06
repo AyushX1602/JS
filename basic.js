@@ -164,19 +164,21 @@
 
 
 
-const fs=require('fs');
-function readtheFile(SendTheFinalValueHere){
+// const fs=require('fs');
+// function readtheFile(SendTheFinalValueHere){
 
-const data= fs.readFile('a.txt','utf-8',function(err,data){
-    SendTheFinalValueHere(data);
-    })
-}
-function readFile(fileName){
-    return new Promise (readtheFile);
-}
-const p= readFile();
+// const data= fs.readFile('a.txt','utf-8',function(err,data){
+//     SendTheFinalValueHere(data);
+//     })
+// }
+// function readFile(fileName){
+//     return new Promise (readtheFile);
+// }
+// const p= readFile();
 
-function callback(contents){
-    console.log(contents);
-}
-p.then(callback);
+// function callback(contents){
+//     console.log(contents);
+// }
+// p.then(callback);
+
+
